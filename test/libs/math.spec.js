@@ -19,11 +19,11 @@ describe('Mathオブジェクトに実装されているメソッドのテスト
       invalidValueList.forEach(invalidValue => {
         let error = null;
         try {
-          Math.add(invalidValue, 1);
+          Math.add(invalidValue, 2);
         } catch (err) {
           error = err;
         }
-        assert.equal(error.message, '数値以外のものが引数に含まれています');
+        assert.equal(error.message, '数値以外のものが引数に含められています');
       });
     });
   });
@@ -76,7 +76,7 @@ describe('Mathオブジェクトに実装されているメソッドのテスト
         } catch (err) {
           error = err;
         }
-        assert.equal(error.message, '数値以外のものが引数に含まれています');
+        assert.equal(error.message, '数値以外のものが引数に含められています');
       });
     });
   });
