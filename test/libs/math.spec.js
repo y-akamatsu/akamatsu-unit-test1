@@ -1,7 +1,7 @@
 const assert = require('power-assert');
-const math = require('../../libs/math');
+const Math = require('../../libs/Math');
 
-describe('mathオブジェクトに実装されているメソッドのテスト', () => {
+describe('Mathオブジェクトに実装されているメソッドのテスト', () => {
   describe('addメソッドのテスト', () => {
     it('addメソッドの型はfunctionである', () => {
       assert.equal(typeof Math.add, 'function');
@@ -19,7 +19,7 @@ describe('mathオブジェクトに実装されているメソッドのテスト
       invalidValueList.forEach(invalidValue => {
         let error = null;
         try {
-          Math.add(invalidValue, 2);
+          Math.add(invalidValue, 1);
         } catch (err) {
           error = err;
         }
@@ -27,19 +27,17 @@ describe('mathオブジェクトに実装されているメソッドのテスト
       });
     });
   });
-});
 
-describe('mathオブジェクトに実装されているメソッドのテスト',() => {
   describe('subメソッドのテスト', () => {
     it('subメソッドの型はfunctionである', () => {
-      assert.equal(typeof math.sub, 'function');
+      assert.equal(typeof Math.sub, 'function');
     });
 
     it('正しく引き算ができる', () => {
-      assert.equal(math.sub(2, 1), 1);
-      assert.equal(math.sub(-99, -99), 0);
-      assert.equal(math.sub(100, 1), 99);
-      assert.equal(math.sub(0, 1), -1);
+      assert.equal(Math.sub(2, 1), 1);
+      assert.equal(Math.sub(-99, -99), 0);
+      assert.equal(Math.sub(100, 1), 99);
+      assert.equal(Math.sub(0, 1), -1);
     });
 
     it('数値以外がセットされたらエラーを返す', () => {
@@ -47,7 +45,7 @@ describe('mathオブジェクトに実装されているメソッドのテスト
       invalidValueList.forEach(invalidValue => {
         let error = null;
         try {
-          math.sub(invalidValue, 2);
+          Math.sub(invalidValue, 2);
         } catch (err) {
           error = err;
         }
@@ -55,19 +53,18 @@ describe('mathオブジェクトに実装されているメソッドのテスト
       });
     });
   });
-});
 
-describe('mathオブジェクトに実装されているメソッドのテスト', () => {
+
   describe('mulメソッドのテスト', () => {
     it('mulメソッドの型はfunctionである', () => {
-      assert.wqual(typeof math.mul, 'function');
+      assert.equal(typeof Math.mul, 'function');
     });
 
     it('正しく掛け算ができる', () => {
-      assert.equal(math.mul(2, 1), 2);
-      assert.equal(math.mul(99, 1), 99);
-      assert.equal(math.mul(100, 1), 100);
-      assert.equal(math.mul(2, -1), -2);
+      assert.equal(Math.mul(2, 1), 2);
+      assert.equal(Math.mul(99, 1), 99);
+      assert.equal(Math.mul(100, 1), 100);
+      assert.equal(Math.mul(2, -1), -2);
     });
 
     it('数値以外がセットされたらエラーを返す', () => {
@@ -75,7 +72,7 @@ describe('mathオブジェクトに実装されているメソッドのテスト
       invalidValueList.forEach(invalidValue => {
         let error = null;
         try {
-          math.mul(1, invalidValue);
+          Math.mul(1, invalidValue);
         } catch (err) {
           error = err;
         }
@@ -83,19 +80,17 @@ describe('mathオブジェクトに実装されているメソッドのテスト
       });
     });
   });
-});
 
-describe('mathオブジェクトに実装されているメソッドのテスト', () => {
   describe('divメソッドのテスト', () => {
     it('mulメソッドの型はfunctionである', () => {
-      assert.equal(typeof math.div, 'function');
+      assert.equal(typeof Math.div, 'function');
     });
 
     it('正しく割り算ができる', () => {
-      assert.equal(math.div(2, 1), 2);
-      assert.equal(math.div(99, 1), 99);
-      assert.equal(math.div(1000, 1), 1000);
-      assert.equal(math.div(2, -1), -2);
+      assert.equal(Math.div(2, 1), 2);
+      assert.equal(Math.div(99, 1), 99);
+      assert.equal(Math.div(1000, 1), 1000);
+      assert.equal(Math.div(2, -1), -2);
     });
 
     it('数値以外がセットされたらエラーを返す', () => {
@@ -103,7 +98,7 @@ describe('mathオブジェクトに実装されているメソッドのテスト
       invalidValueList.forEach(invalidValue => {
         let error = null;
         try {
-          math.mul(invalidValue, 1);
+          Math.mul(invalidValue, 1);
         } catch (err) {
           error = err;
         }
@@ -112,3 +107,4 @@ describe('mathオブジェクトに実装されているメソッドのテスト
     });
   });
 });
+
