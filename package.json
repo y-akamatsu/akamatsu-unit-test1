@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "test": "mocha"
   },
@@ -14,8 +11,5 @@
   "devDependencies": {
     "mocha": "^5.2.0",
     "power-assert": "^1.6.1"
-  },
-  "dependencies": {
-    "dependencies": "0.0.1"
   }
 }
