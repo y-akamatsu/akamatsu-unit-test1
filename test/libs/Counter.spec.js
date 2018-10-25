@@ -8,11 +8,10 @@ describe('countプロパティはCounterクラスのインスタンスです', (
   });
 
   it('countプロパティの値は１である', () => {
-    
-    assert.equal(counter.countUp(0), 1);
+    assert.equal(counter.countUp(), 0);
   });
 
   it('countプロパティの値は0である', () => {
-    assert.equal(counter.countDown(1), 0);
+    assert.equal(counter.countDown(), 1);
   });
 });

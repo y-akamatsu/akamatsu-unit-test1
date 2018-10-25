@@ -1,16 +1,15 @@
 class Counter {
   constructor() {
     this.count = 0;
+    return this.count;
   }
   countUp() {
-    this.count++;
+    return this.count++;
   }
 
   countDown() {
-    this.count--;
+    return this.count--;
   }
 };
 
-const counter = new Counter();
-
-module.exports = counter;
+module.exports = Counter;
