@@ -4,7 +4,7 @@ const Counter = require('../../libs/Counter');
 const counter = new Counter();
 describe('countプロパティはCounterクラスのインスタンスです', () => {
   it('countプロパティのデフォルト値は0である', () => {
-    assert.equal(counter instanceof Counter, counter instanceof Counter);
+    assert.equal(counter instanceof Counter, true);
     assert.equal(counter.count, 0);
   });
 
