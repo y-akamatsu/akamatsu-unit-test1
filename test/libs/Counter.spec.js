@@ -1,17 +1,20 @@
 const assert = require('power-assert');
 const Counter = require('../../libs/Counter');
-const counter = new Counter();
 
+const counter = new Counter();
 describe('countプロパティはCounterクラスのインスタンスです', () => {
-  it('countプロパティ値は０である', () => {
+  it('countプロパティのデフォルト値は0である', () => {
     assert.equal(counter instanceof Counter);
+    assert.equal(counter.count, 0);
   });
 
   it('countプロパティの値は１である', () => {
-    assert.equal(counter.countUp(), 0);
+    counter.countUp();
+    assert.equal(counter.count, 1);
   });
 
   it('countプロパティの値は0である', () => {
-    assert.equal(counter.countDown(), 1);
+    counter.countDown();
+    assert.equal(counter.count, 0);
   });
 });
