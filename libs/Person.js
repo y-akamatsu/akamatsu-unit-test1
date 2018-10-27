@@ -8,14 +8,13 @@ class Person {
     this.weight = weight;
   }
 
-  say(surname, name) {
+  say() {
     return "私の名前は" + this.surname + this.name + "です。";
   }
-  
+
   fullName() {
     return this.surname + this.name;
   }
-
 
   BMI() {
     return this.weight / (this.height * this.height);
