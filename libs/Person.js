@@ -1,7 +1,7 @@
 class Person {
-  constructor(surname, name, age, gender, height, weight) {
-    this.surname = surname;
-    this.name = name;
+  constructor(firstName, lastName, age, gender, height, weight) {
+    this.firstName = firstName;
+    this.lastName = lastName;
     this.age = age;
     this.gender = gender;
     this.height = height;
@@ -9,15 +9,16 @@ class Person {
   }
 
   say() {
-    return "私の名前は" + this.surname + this.name + "です。";
+    return "私の名前は" + this.getFullName() + "です。";
   }
 
-  fullName() {
-    return this.surname + this.name;
+  getFullName() {
+    return this.firstName + this.lastName;
   }
 
-  BMI() {
-    return this.weight / (this.height * this.height);
+  getBMI() {
+    const y = this.weight / (this.height * this.height);
+    return Math.floor(y);
   }
 };
 
