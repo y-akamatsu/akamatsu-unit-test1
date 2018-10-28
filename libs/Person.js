@@ -8,7 +8,7 @@ class Person {
     this.weight = weight;
   }
 
-  get getFullName() {
+  introduceMyself() {
     return "私の名前は" + this.fullName + "です。";
   }
 
@@ -16,7 +16,7 @@ class Person {
     return this.firstName + this.lastName;
   }
 
-  calculationBMI() {
+  calculateBMI() {
     const bmi = this.weight / (this.height * this.height);
     return Math.floor(bmi);
   }
